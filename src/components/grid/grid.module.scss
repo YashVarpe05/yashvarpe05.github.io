@@ -1,0 +1,42 @@
+.container {
+	max-width: 1200px;
+	position: relative;
+	margin: -16px auto 0 auto;
+	padding-bottom: 80px;
+
+	@media (max-width: 1200px) {
+		max-width: 1000px;
+	}
+
+	@media (max-width: 799px) {
+		max-width: 575px;
+	}
+
+	@media (max-width: 374px) {
+		// max-width: 320px;
+	}
+}
+
+.itemGrab {
+	overflow: hidden;
+	border-radius: 24px;
+	user-select: none;
+
+	@media (min-width: 769px) {
+		&:hover {
+			cursor: grab;
+		}
+
+		&:active {
+			cursor: grabbing;
+		}
+	}
+}
+
+.item {
+	transition: 1.25s ease;
+
+	&:hover {
+		box-shadow: rgba(100, 100, 111, 0.1) 0px 5px 24px 0px;
+	}
+}
